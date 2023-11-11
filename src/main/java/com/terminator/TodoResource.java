@@ -26,4 +26,11 @@ public class TodoResource {
     public Todo getTodo(@PathParam("id") Integer id) {
         return todoService.getTodo(id);
     }
+
+    @GET
+    @Path("/invalidate")
+    public String invalidate() {
+        todoService.invalidate();
+        return "invalidated";
+    }
 }
