@@ -1,0 +1,14 @@
+quarkus:
+  rest-client:
+    todos:
+      url: https://jsonplaceholder.typicode.com
+      scope: jakarta.inject.Singleton
+
+  cache:
+    caffeine:
+      cache-todos:
+        expire-after-write: 12M
+        metrics-enabled: true
+      cache-todos-with-path:
+        expire-after-write: 12M
+        metrics-enabled: true
